@@ -1,10 +1,8 @@
-# from flask_cors import CORS
 from flask import Flask, request,jsonify
 import os
 
 app = Flask(__name__)
 
-#My api route 
 
 @app.route("/api/rooms")
 def api():
@@ -58,22 +56,10 @@ def mywebhook():
         output = open(os.path.join(dest_dir, file_name), 'wb')
       
             
-            # stream.write('foo\n')
         return {'request':'200 OK'}
     else :
         return {'request':'GET'}
         
-        
-    
-
-
-
-@app.route("/abc",methods=["POST","GET"])
-def abc():
-    # if request.method=="GET":
-    print("hola")
-    # return{"abc":}
-
 if __name__=="__main__":
     app.run(debug=True)
 
